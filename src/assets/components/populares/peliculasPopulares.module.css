@@ -1,0 +1,75 @@
+.paginacion {
+	/* position: fixed; */
+	/* bottom: 0; */
+	/* background: #100a1f; */
+	/* width: 100%; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	/* padding: 10px; */
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+	width: auto;
+	/* padding: 0 1rem; */
+	background: var(--background);
+	color: #fff;
+	/* border-radius: 100px; */
+	transition: .3s ease all;
+	/* font-size: 1rem; */
+}
+
+.contenedor {
+	/* background-color: #00FFFF; */
+	height: 95%;
+	padding: 1rem 0;
+	display: grid;
+	grid-template-columns: repeat(21, 1fr);
+	/* text-align: center; */
+	overflow-x: scroll;
+	overflow-y: hidden;
+	border-radius: 1rem;
+	gap: 1.15rem;
+}
+
+.contenedor .pelicula {
+	text-align: center;
+	cursor: pointer;
+
+	&:hover{
+		transform: scale(1.08);
+		transition: 0.2s;
+	}
+	&:not(:hover){
+		transition: 0.2s;
+	}
+}
+
+/* .contenedor .pelicula .titulo {
+	font-weight: 600;
+	font-size: 16px;
+} */
+
+.contenedor .pelicula .poster {
+	height: 100%;
+	width: 14vw;
+	/* width: 100%; */
+	/* margin-bottom: 10px; */
+	border-radius: 1rem;
+}
+
+.contenedor .pelicula .posterRated {
+	height: 95%;
+	width: 14vw;
+	/* width: 100%; */
+	/* margin-bottom: 10px; */
+	border-radius: 1rem;
+}

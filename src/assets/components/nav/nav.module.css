@@ -1,0 +1,158 @@
+.header_bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 10vh;
+	padding: 1vh 4vw;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.logo_header {
+	display: flex;
+	/* gap: 0.5rem; */
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo_header i {
+	font-size: 1.5rem;
+	color: var(--white-text);
+}
+
+.logo_header h1 {
+	color: var(--pink-principal);
+	cursor: pointer;
+	position: relative;
+	font-size: 2rem;
+}
+
+.logo_header h1::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	/* Ajusta el valor para la posición del subrayado */
+	width: 0;
+	height: 2px;
+	/* Grosor del subrayado */
+	background-color: var(--pink-principal);
+	transition: width 0.5s ease-in-out;
+	/* Transición para el ancho */
+}
+
+.logo_header h1:hover::after {
+	width: 100%;
+	/* Ancho completo al pasar el cursor */
+}
+
+.logo_header h1:not(:hover)::after {
+	width: 0;
+	/* Ancho cero cuando no se pasa el cursor */
+}
+
+
+.search_container {
+	position: relative;
+	display: inline-block;
+	width: 40%;
+}
+
+input[type="text"] {
+	padding: 0.6rem;
+	border: none;
+	border-radius: 5px;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: var(--background-minus-black);
+	color: var(--white-text);
+	font-size: 1rem;
+}
+
+.search_container button {
+	padding: 0.6rem;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	background-color: var(--third-grade-black);
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 0.8rem;
+	font-size: 1rem;
+
+	&:hover {
+		background-color: var(--pink-principal);
+		transition: 0.5s;
+	}
+
+	&:not(:hover) {
+		transition: 0.5s;
+	}
+}
+
+/* Icon inside button */
+button i {
+	/* font-size: 1rem; */
+	height: 100%;
+
+}
+
+.options_header a{
+	color: var(--white-text);
+}
+.option_search {
+	display: flex;
+	color: var(--white-text);
+	gap: 0.5rem;
+	align-items: center;
+	padding: 0.5rem;
+	border-radius: 5px;
+	background-color: var(--pink-principal);
+
+	&:hover {
+		transition: 0.5s;
+		transform: scale(1.2);
+		background-color: var(--white-text);
+		color: var(--pink-principal);
+	}
+
+	&:not(:hover) {
+		transition: 0.5s;
+	}
+}
+
+.options_header {
+	display: flex;
+	gap: 3vw;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.option {
+	/* color: var(--pink-principal); */
+	cursor: pointer;
+	position: relative;
+}
+
+.option::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background-color: var(--white-text);
+	transition: width 0.4s ease-in-out;
+}
+
+.option:hover::after {
+	width: 100%;
+	/* Ancho completo al pasar el cursor */
+}
+
+.option:not(:hover)::after {
+	width: 0;
+	/* Ancho cero cuando no se pasa el cursor */
+}
